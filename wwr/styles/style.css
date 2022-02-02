@@ -1,0 +1,23 @@
+
+
+#content{background-color: orange;
+max-width: 1800px;
+margin: 0 auto;
+text-align: center;}
+
+
+body {
+    background-color: #fcfbfb; 
+}
+header {
+    background-color:rgba(20,30,13, .7);
+}
+nav a:hover {
+    background-color: black;
+    color: #d9c2a3;
+}
+.icon{
+    width: 80px;
+}
+
+img{max-width: 100%;}

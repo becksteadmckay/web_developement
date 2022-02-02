@@ -1,0 +1,22 @@
+main {background-color: blue;}
+#first-section{
+    width: 300px;
+    border: 5px solid black;
+    padding: 20px;
+    margin: auto;
+    background-color: beige;
+    border-radius: 10%;
+
+}
+
+#second-section{width: 500px;
+    border: 5px solid rgb(226, 82, 82);
+    padding: 20px;
+    margin: auto;
+    background-color: rgb(54, 152, 190);
+    border-radius: 0%;}
+
+img{
+    border-radius: 0%;
+    margin: 0 auto;
+}
