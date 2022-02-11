@@ -1,0 +1,9 @@
+.circles {
+    max-width: 275px;
+    margin: 75px;
+    border-radius: 50%;
+    border: 25px solid grey;
+
+    display: block;}
+
+

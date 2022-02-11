@@ -1,23 +1,101 @@
 
 
-#content{background-color: orange;
-max-width: 1800px;
+#content{/* background-color: orange; */
+max-width: 1600px;
 margin: 0 auto;
-text-align: center;}
-
-
-body {
-    background-color: #fcfbfb; 
+text-align: center;   
 }
-header {
-    background-color:rgba(20,30,13, .7);
+
+nav {
+    text-align: right;
 }
+/* top of the page */
+nav a {
+    color: #fcfcfc;
+    text-decoration: none;
+    background-color: purple;
+}
+
+.oars {text-align: right;}
+#logo-link {text-align: right;}
+
+/* #link {text-align: left;} */
+
+#hero-img {width: 100%;}
+
 nav a:hover {
     background-color: black;
-    color: #d9c2a3;
+    color: #265fb4;
 }
+header {
+    background-color:rgba(106, 204, 35, 0.7);
+}
+/* 
+body {
+    background-color: #2fa5c2; 
+} */
+main {background-color: lightcoral;}
+
+
+
+.book, .join {background-color: rgb(255, 255, 255);}
+
+
 .icon{
     width: 80px;
 }
 
+
+
+
 img{max-width: 100%;}
+
+#background {
+    height: 725px;
+    background-color: rgb(0, 252, 239);
+}
+
+
+footer {
+    text-align: left;
+    background-color: lightblue;
+
+}
+
+footer a {
+    
+    text-align: right;
+    color: #000000;
+    text-decoration: none;
+
+}
+footer a {
+    
+    text-align: right;
+    color: #000000;
+    text-decoration: none;
+
+}
+footer a {
+    
+    text-align: right;
+    color: #000000;
+    text-decoration: none;
+
+}
+
+
+footer a {
+    
+    text-align: right;
+    color: #000000;
+    text-decoration: none;
+
+}
+footer a {
+    
+    text-align: right;
+    color: #000000;
+    text-decoration: none;
+
+}
