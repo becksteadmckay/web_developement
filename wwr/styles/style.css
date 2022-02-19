@@ -3,9 +3,16 @@
 #content{/* background-color: orange; */
 max-width: 1600px;
 margin: 0 auto;
+font-family: Helvetica, Arial, sans-serif;
  
 }
-
+h2 {
+    margin: 0;
+}
+.home-title{
+    font-size: 2em;
+    margin-top: 10px;
+}
 nav {
     text-align: left;
 }
@@ -13,20 +20,19 @@ nav {
 nav a {
     color: #fcfcfc;
     text-decoration: none;
-    background-color: purple;
+    
+    padding: 35px;
 }
 header {
     text-align: left;
 }
 .home-grid{
-    text-align: 
-    center;
+    text-align: center;
 }
 .oars {text-align: left;}
 
-#logo-link {text-align: lift;}
-
-/* #link {text-align: left;} */
+#logo-link {text-align: left;
+padding-top: 5px;}
 
 #hero-img {width: 100%;}
 
@@ -35,23 +41,43 @@ nav a:hover {
     color: #265fb4;
 }
 header {
-    background-color:rgba(106, 204, 35, 0.7);
+    background-color: #d9c2a3;
     text-align: left;
 }
-/* 
 body {
-    background-color: #2fa5c2; 
-} */
-main {background-color: lightcoral;}
+    background-color: #fcfbfb;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+main section img {
+    box-sizing: border-box;
+}
 
+.rivers-card, .camping-card, .rapids-card {  margin: 200px 0;}
 
+.book, .join {
+    background-color: #d9c2a3;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
 
-.book, .join {background-color: rgb(255, 255, 255);}
+.card-img {
+    border: 10px solid #d9c2a3;
+}
 
-.msg {text-align: center;}
+.msg {text-align: center;
+padding: 35px;}
+.msg p {font-size: .8em;
+padding-bottom: 15px;}
 
 .icon{
     width: 80px;
+    padding-top: 10px;
 }
 
 
@@ -61,7 +87,7 @@ img{max-width: 100%;}
 
 #background {
     height: 725px;
-    background-color: rgb(0, 252, 239);
+    background-color:#d9c2a3;
 }
 
 #mountains_photo {
@@ -71,6 +97,7 @@ img{max-width: 100%;}
 footer {
     text-align: left;
     background-color: lightblue;
+    margin-top: 200px;
 
 }
 
@@ -79,6 +106,9 @@ footer a {
     text-align: right;
     color: #000000;
     text-decoration: none;
+    padding: 25px 50px;
+}
 
+footer .social img {padding-top: 15px;
 
-
+}
