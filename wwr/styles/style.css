@@ -24,7 +24,9 @@ nav a {
     padding: 35px;
 }
 header {
-    text-align: left;
+    
+    display: grid;
+    grid-template-columns: 150px, auto;
 }
 .home-grid{
     text-align: center;
