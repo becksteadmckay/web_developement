@@ -1,6 +1,6 @@
 
 
-#content{/* background-color: orange; */
+#content{
 max-width: 1600px;
 margin: 0 auto;
 font-family: Helvetica, Arial, sans-serif;
@@ -35,6 +35,9 @@ header {
 padding-top: 5px;}
 
 #hero-img {width: 100%;}
+#hero-msg {
+    text-align: center;
+}
 
 nav a:hover {
     background-color: black;
