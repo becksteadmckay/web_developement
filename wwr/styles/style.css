@@ -14,7 +14,8 @@ h2 {
     margin-top: 10px;
 }
 nav {
-    text-align: left;
+    display: flex;
+    justify-content: space-around;
 }
 /* top of the page */
 nav a {
@@ -22,11 +23,6 @@ nav a {
     text-decoration: none;
     
     padding: 35px;
-}
-header {
-    
-    display: grid;
-    grid-template-columns: 150px, auto;
 }
 .home-grid{
     text-align: center;
@@ -47,8 +43,10 @@ nav a:hover {
 }
 header {
     background-color: #d9c2a3;
-    text-align: left;
-}
+    display: grid;
+    grid-template-columns: 150px auto;
+} 
+
 body {
     background-color: #fcfbfb;
     font-size: 22px;
