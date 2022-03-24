@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W10 form</title>
+    
+    <style>
+        * {box-sizing: border-box;}
+        form {max-width: 40rem;} 
+        form label, form input, form textarea, form button {display: block; width: 20rem; margin: 0;}
+        form input, form textarea, form button {padding: .75rem;}
+
+        form textarea, form input{margin-bottom: .75rem;}
+        
+    #feedback {
+        background-color: antiquewhite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: .5em;
+        /* make this element invisible until we are ready for it */
+        display: none;       
+    }
+    .moveDown {
+        margin-top: 3em;
+    } 
+    </style>
+    
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <div id = "feedback">
+    </div>
+    <form action="thankyou.html">
+        
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Bob" autofocus>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname" placeholder="Beckstead">
+
+        <label for="comment">Coment Box</label>
+        <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+
+        <button type="submit">Submit</button>
+        
+    </form>
+
+    
+</body>
+                   
+</html>

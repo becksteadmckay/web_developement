@@ -12,9 +12,9 @@ body {
     margin: 0;
     padding: 0;
 }
-h2 {
+/* h2 {
     margin: 0;
-}
+} */
 
 /* text-align and justify center */
 nav a, #hero-msg h1, #hero-msg h4, .button-box, main section {text-align: center;}
@@ -57,10 +57,7 @@ footer a {text-decoration: none;}
 .icon, .logo {
     width: 80px;
 }
-#hero-img {
-    width: 100%;
-}
-.card-img {
+#hero-img, .card-img {
     width: 100%;
 }
 
@@ -198,10 +195,49 @@ footer {
     align-items: center;
 }
 
+/* Page  2 Rivers*/
+
+
+.river-div {
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr) ;
+}
+.river-img{
+
+    width: max-width;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 10px solid #d9c2a3;
+
+}
+.river-section{margin-top: 25px;
+    padding: 50px;
+    background-color: beige;}
+
+    
+#salmon-discription{ grid-column: 1/2;
+grid-row: 1/2;}
+#salmon-river-img { grid-column: 2/3;
+    grid-row: 1/2;}
+
+#grandcanyon-river-img {grid-column: 2/3;}
+#grandcanyon-description{grid-row: 1/2;}
+
+
+
+.river-title{text-align: center;}
+
+
+
+
+
+
 /* With a smaller screen */
 
 
 @media screen and (max-width: 900px) {
+
     #hero, .home-grid {
         display: block;
         height: auto;
