@@ -1,43 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W10 form</title>
-    
-    <style>
-        * {box-sizing: border-box;}
-        form {max-width: 40rem;} 
-        form label, form input, form textarea, form button {display: block; width: 20rem; margin: 0;}
-        form input, form textarea, form button {padding: .75rem;}
 
-        form textarea, form input{margin-bottom: .75rem;}
-        
-    #feedback {
-        background-color: antiquewhite;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: .5em;
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        form {
+            max-width: 40rem;
+        }
+
+        form label,
+        form input,
+        form textarea,
+        form button {
+            display: block;
+            width: 20rem;
+            margin: 0;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            padding: .75rem;
+        }
+
+        form textarea,
+        form input {
+            margin-bottom: .75rem;
+        }
+
+        #feedback {
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: .5em;
+            display: none;
+        }
+
         /* make this element invisible until we are ready for it */
-        display: none;       
-    }
-    .moveDown {
-        margin-top: 3em;
-    } 
+
+
+        .moveDown {
+            margin-top: 3em;
+        }
     </style>
-    
+
 </head>
+
 <body>
     <h1>Contact Us</h1>
-    <div id = "feedback">
+    <div id="feedback">
     </div>
     <form action="thankyou.html">
-        
+        <label for="user_name">User Name:</label>
+        <input type="text" id="user_name" name="user_name" placeholder="20Bob" autofocus>
+
         <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" placeholder="Bob" autofocus>
+        <input type="text" id="fname" name="fname" placeholder="Bob">
 
         <label for="lname">Last Name:</label>
         <input type="text" name="lname" id="lname" placeholder="Beckstead">
@@ -46,10 +74,27 @@
         <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
 
         <button type="submit">Submit</button>
-        
-    </form>
 
-    
+    </form>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function (e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value + '! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+
+
 </body>
-                   
+
 </html>
