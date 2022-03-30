@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,85 +10,96 @@
     <style>
         form {
 
-/* Center the form on the page */
-margin: 0 auto;
-width: 400px;
+            /* Center the form on the page */
+            margin: 0 auto;
+            width: 400px;
 
 
-/* Form outline */
-padding: 1em;
-border: 1px solid #CCC;
-border-radius: 1em;
-}
+            /* Form outline */
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+        }
 
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-form li + li {
-margin-top: 1em;
-}
+        form li+li {
+            margin-top: 1em;
+        }
 
-label {
-/* Uniform size & alignment */
-display: inline-block;
-width: 400px;
-text-align: center;
-}
+        label {
+            /* Uniform size & alignment */
+            display: inline-block;
+            width: 400px;
+            text-align: center;
+        }
 
-input,
-textarea {
-/* To make sure that all text fields have the same font settings
+        input,
+        textarea {
+            /* To make sure that all text fields have the same font settings
    By default, textareas have a monospace font */
-font: 1em sans-serif;
+            font: 1em sans-serif;
 
 
-/* Uniform text field size */
-width: 400px;
-box-sizing: border-box;
+            /* Uniform text field size */
+            width: 400px;
+            box-sizing: border-box;
 
-/* Match form field borders */
-border: 1px solid #999;
-/* text-align: center; */
-}
+            /* Match form field borders */
+            border: 1px solid #999;
+            /* text-align: center; */
+        }
 
-input:focus,
-textarea:focus {
-/* Additional highlight for focused elements */
-border-color: #000;
-}
+        input:focus,
+        textarea:focus {
+            /* Additional highlight for focused elements */
+            border-color: #000;
+        }
 
-textarea {
-/* Align multiline text fields with their labels */
-vertical-align: top;
+        textarea {
+            /* Align multiline text fields with their labels */
+            vertical-align: top;
 
-/* Provide space to type some text */
-height: 5em;
-}
+            /* Provide space to type some text */
+            height: 5em;
+        }
 
-.button {
-/* Align buttons with the text fields */
-padding-left: 90px; /* same size as the label elements */
-}
+        .button {
+            /* Align buttons with the text fields */
+            padding-left: 90px;
+            /* same size as the label elements */
+        }
 
-button {
-/* This extra margin represent roughly the same space as the space
+        button {
+            /* This extra margin represent roughly the same space as the space
    between the labels and their text fields */
-margin-left: .5em;
-}
-form button {display: block; width: 20rem; margin: 0 auto;}
-form label {display: block;}
+            margin-left: .5em;
+        }
 
-main h1 {margin-top: 100px;
-text-align: center;}
+        form button {
+            display: block;
+            width: 20rem;
+            margin: 0 auto;
+        }
 
-#feedback{
-    font-size: 22px;
-    text-align: center;
-    padding: 15px;
-}
+        form label {
+            display: block;
+        }
+
+        main h1 {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        #feedback {
+            font-size: 22px;
+            text-align: center;
+            padding: 15px;
+        }
     </style>
 </head>
 <div id="content">
@@ -99,93 +111,100 @@ text-align: center;}
             <a href="contact-us.html">Contact Us</a>
         </nav>
     </header>
+
+    <main>
+        <div id="feedback">
+        </div>
+        <h1>Contact Us</h1>
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" placeholder="Bob Beckstead" />
+                </li>
+                <li>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="user_email" placeholder="mckay4beckstead@gmail.com" />
+                </li>
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"
+                        placeholder="Spider-Man 2 is the best movie of all time. Not The Dark Knight."></textarea>
+                </li>
+                <li>
+                    <button type="submit">submit </button>
+                </li>
+
+            </ul>
+
+            <script>
+                // get the feedback div element so we can do something with it.
+                const feedbackElement = document.getElementById('feedback');
+                // get the form so we can read what was entered in it.
+                const formElement = document.forms[0];
+                // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+                formElement.addEventListener('submit', function (e) {
+                    // stop the form from doing the default action.
+                    e.preventDefault();
+                    // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                    feedbackElement.innerHTML = 'Hello ' + formElement.name.value + '! Thank you for your message. We will get back with you as soon as possible!';
+                    // make the feedback element visible.
+                    feedbackElement.style.display = "block";
+                    // add a class to move everything down so our message doesn't cover it.
+                    document.body.classList.toggle('moveDown');
+                });
+            </script>
+        </form>
+            
+    </main>
+    <div class="photo-row">
+        <img src="images/the-dark-knight.jpg" alt="the-dark-knight.jpg photo">
+        <img src="images/spider-man-2.jpg" alt="Spider-Man 2 photo">
+        <img src="images/thor-ragnarok.jpg" alt="Thor Ragnarok photo">
+        <img src="images/spider-man-no-way-home.jpg" alt="Spider-Man: No Way Home photo">
+        <img src="images/batman-begins.jpg" alt="batman-begins.jpg photo">
+        <img src="images/the-dark-knight-rises.jpg" alt="the-dark-knight.jpg Rises photo">
+        <img src="images/iron-man.jpg" alt="iron-man photo">
+        <img src="images/avengers-infinity-war.jpg" alt="Avengers Infinity War photo">
+        <img src="images/captain-america-civil-war.jpg" alt="captain america civil war photo">
+        <img src="images/avengers-endgame.jpg" alt="Avengers Endgame photo">
+        <img src="images/the-dark-knight.jpg" alt="the-dark-knight.jpg photo">
+        <img src="images/spider-man-2.jpg" alt="Spider-Man 2 photo">
+        <img src="images/thor-ragnarok.jpg" alt="Thor Ragnarok photo">
+        <img src="images/spider-man-no-way-home.jpg" alt="Spider-Man: No Way Home photo">
+        <img src="images/batman-begins.jpg" alt="batman-begins.jpg photo">
+        <img src="images/the-dark-knight-rises.jpg" alt="the-dark-knight.jpg Rises photo">
+        <img src="images/iron-man.jpg" alt="iron-man photo">
+        <img src="images/avengers-infinity-war.jpg" alt="Avengers Infinity War photo">
+        <img src="images/captain-america-civil-war.jpg" alt="captain america civil war photo">
+        <img src="images/avengers-endgame.jpg" alt="Avengers Endgame photo">
+        <img src="images/the-dark-knight.jpg" alt="the-dark-knight.jpg photo">
+        <img src="images/spider-man-2.jpg" alt="Spider-Man 2 photo">
+        <img src="images/thor-ragnarok.jpg" alt="Thor Ragnarok photo">
+        <img src="images/spider-man-no-way-home.jpg" alt="Spider-Man: No Way Home photo">
+        <img src="images/batman-begins.jpg" alt="batman-begins.jpg photo">
+        <img src="images/the-dark-knight-rises.jpg" alt="the-dark-knight.jpg Rises photo">
+        <img src="images/iron-man.jpg" alt="iron-man photo">
+        <img src="images/avengers-infinity-war.jpg" alt="Avengers Infinity War photo">
+        <img src="images/captain-america-civil-war.jpg" alt="captain america civil war photo">
+        <img src="images/avengers-endgame.jpg" alt="Avengers Endgame photo">
+        <img src="images/the-dark-knight.jpg" alt="the-dark-knight.jpg photo">
+        <img src="images/spider-man-2.jpg" alt="Spider-Man 2 photo">
+        <img src="images/thor-ragnarok.jpg" alt="Thor Ragnarok photo">
+        <img src="images/spider-man-no-way-home.jpg" alt="Spider-Man: No Way Home photo">
+        <img src="images/batman-begins.jpg" alt="batman-begins.jpg photo">
+        <img src="images/the-dark-knight-rises.jpg" alt="the-dark-knight.jpg Rises photo">
+        <img src="images/iron-man.jpg" alt="iron-man photo">
+        <img src="images/avengers-infinity-war.jpg" alt="Avengers Infinity War photo">
+        <img src="images/captain-america-civil-war.jpg" alt="captain america civil war photo">
+        <img src="images/avengers-endgame.jpg" alt="Avengers Endgame photo">
+
+
+    </div>
+
     
-    <body>
-        <main>
-            <div id="feedback">
-            </div>
-            <h1>Contact Us</h1>
-              <form action="/my-handling-form-page" method="post">
-                  <ul>
-                   <li>
-                     <label for="name">Name:</label>
-                     <input type="text" id="name" name="user_name" placeholder="Bob Beckstead" />
-                   </li>
-                   <li>
-                     <label for="mail">E-mail:</label>
-                     <input type="email" id="mail" name="user_email" placeholder="mckay4beckstead@gmail.com"/>
-                   </li>
-                   <li>
-                     <label for="msg">Message:</label>
-                     <textarea id="msg" name="user_message" placeholder="Spider-Man 2 is the best movie of all time. Not The Dark Knight."></textarea>
-                   </li>
-                   <li>
-                      <button type="submit">submit </button>
-                   </li>
-                   <script>
-                    // get the feedback div element so we can do something with it.
-                    const feedbackElement = document.getElementById('feedback');
-                    // get the form so we can read what was entered in it.
-                    const formElement = document.forms[0];
-                    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
-                    formElement.addEventListener('submit', function(e) {
-                        // stop the form from doing the default action.
-                        e.preventDefault();
-                        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
-                        feedbackElement.innerHTML = 'Hello '+ formElement.name.value +'! Thank you for your message. We will get back with you as soon as possible!';
-                        // make the feedback element visible.
-                        feedbackElement.style.display = "block";
-                        // add a class to move everything down so our message doesn't cover it.
-                        document.body.classList.toggle('moveDown');
-                    });
-                </script>
-        </main>
-        
-    </body>
-    <section class="photo-row">
-        <img  src="images/the dark knight.jpg" alt="The Dark Knight photo">
-        <img  src="images/spider-man 2.jpg" alt="Spider-Man 2 photo">
-        <img  src="images/Thor Ragnarok.jpg" alt="Thor Ragnarok photo">
-        <img  src="images/spider-man no way home.jpg" alt="Spider-Man: No Way Home photo">
-        <img  src="images/batman begins.jpg" alt="Batman Begins photo">
-        <img  src="images/the dark knight rises.jpg" alt="The Dark Knight Rises photo">
-        <img  src="images/iron man.jpg" alt="Iron Man photo">
-        <img  src="images/avengers infinity war.jpg" alt="Avengers Infinity War photo">
-        <img  src="images/captain america civil war.jpg" alt="captain america civil war photo">
-        <img  src="images/avengers endgame.jpg" alt="Avengers Endgame photo">
-        <img  src="images/the dark knight.jpg" alt="The Dark Knight photo">
-        <img  src="images/spider-man 2.jpg" alt="Spider-Man 2 photo">
-        <img  src="images/Thor Ragnarok.jpg" alt="Thor Ragnarok photo">
-        <img  src="images/spider-man no way home.jpg" alt="Spider-Man: No Way Home photo">
-        <img  src="images/batman begins.jpg" alt="Batman Begins photo">
-        <img  src="images/the dark knight rises.jpg" alt="The Dark Knight Rises photo">
-        <img  src="images/iron man.jpg" alt="Iron Man photo">
-        <img  src="images/avengers infinity war.jpg" alt="Avengers Infinity War photo">
-        <img  src="images/captain america civil war.jpg" alt="captain america civil war photo">
-        <img  src="images/avengers endgame.jpg" alt="Avengers Endgame photo">
-        <img  src="images/the dark knight.jpg" alt="The Dark Knight photo">
-        <img  src="images/spider-man 2.jpg" alt="Spider-Man 2 photo">
-        <img  src="images/Thor Ragnarok.jpg" alt="Thor Ragnarok photo">
-        <img  src="images/spider-man no way home.jpg" alt="Spider-Man: No Way Home photo">
-        <img  src="images/batman begins.jpg" alt="Batman Begins photo">
-        <img  src="images/the dark knight rises.jpg" alt="The Dark Knight Rises photo">
-        <img  src="images/iron man.jpg" alt="Iron Man photo">
-        <img  src="images/avengers infinity war.jpg" alt="Avengers Infinity War photo">
-        <img  src="images/captain america civil war.jpg" alt="captain america civil war photo">
-        <img  src="images/avengers endgame.jpg" alt="Avengers Endgame photo">
-        <img  src="images/the dark knight.jpg" alt="The Dark Knight photo">
-        <img  src="images/spider-man 2.jpg" alt="Spider-Man 2 photo">
-        <img  src="images/Thor Ragnarok.jpg" alt="Thor Ragnarok photo">
-        <img  src="images/spider-man no way home.jpg" alt="Spider-Man: No Way Home photo">
-        <img  src="images/batman begins.jpg" alt="Batman Begins photo">
-        <img  src="images/the dark knight rises.jpg" alt="The Dark Knight Rises photo">
-        <img  src="images/iron man.jpg" alt="Iron Man photo">
-        <img  src="images/avengers infinity war.jpg" alt="Avengers Infinity War photo">
-        <img  src="images/captain america civil war.jpg" alt="captain america civil war photo">
-        <img  src="images/avengers endgame.jpg" alt="Avengers Endgame photo">
-    </section>
     <footer>
-        
+
         <h3>McKay's Rankings © 2022 - McKay Beckstead</h3>
         <div id="social-media-icons">
             <a href="https://facebook.com" target="_blank">
