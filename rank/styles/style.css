@@ -86,6 +86,15 @@ h2 {
     z-index: -2;
 }
 
+
+
+#mckay{margin-left: 20%;
+margin-right: 20%;
+padding: 12px;
+border: 5px solid grey;
+}
+
+
 .l-movie-img {
     height: 100%;
 
